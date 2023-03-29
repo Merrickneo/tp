@@ -11,13 +11,21 @@ Class "<<interface>>\nUserPrefsStorage" as UserPrefsStorage
 Class JsonUserPrefsStorage
 }
 
+<<<<<<< HEAD
 Class "<<interface>>\nStorage" as storage
+=======
+Class "<<interface>>\nStorage" as Storage1
+>>>>>>> dde2fe9b38fe64cd8aeacb3aa5684dfb3c4af2ee
 Class StorageManager
 
 package "HMHero Storage" #F4F6F6{
 Class "<<interface>>\nHMHeroStorage" as HMHeroStorage
 Class JsonHMHeroStorage
+<<<<<<< HEAD
 Class JsonSerializableAddressBook
+=======
+Class JsonSerializableHMHero
+>>>>>>> dde2fe9b38fe64cd8aeacb3aa5684dfb3c4af2ee
 Class JsonAdaptedPerson
 Class JsonAdaptedNote
 }
@@ -25,6 +33,7 @@ Class JsonAdaptedNote
 }
 
 Class HiddenOutside #FFFFFF
+<<<<<<< HEAD
 HiddenOutside ..> storage
 
 StorageManager .up.|> storage
@@ -39,5 +48,22 @@ JsonHMHeroStorage .up.|> HMHeroStorage
 JsonHMHeroStorage ..> JsonSerializableAddressBook
 JsonSerializableAddressBook --> "*" JsonAdaptedPerson
 JsonAdaptedPerson --> "*" JsonAdaptedNote
+=======
+HiddenOutside ..> Storage1
+
+
+StorageManager .up.|> Storage1
+StorageManager -up-> "1" UserPrefsStorage
+StorageManager -up-> "1" HMHeroStorage
+
+Storage1 -left-|> UserPrefsStorage
+Storage1 -right-|> HMHeroStorage
+
+JsonUserPrefsStorage .up.|> UserPrefsStorage
+JsonHMHeroStorage .up.|> HMHeroStorage
+JsonHMHeroStorage ..> JsonSerializableHMHero
+JsonSerializableHMHero --> "*" JsonAdaptedPerson
+JsonAdaptedPerson --> "*" JsonAdaptedTag
+>>>>>>> dde2fe9b38fe64cd8aeacb3aa5684dfb3c4af2ee
 
 @enduml
