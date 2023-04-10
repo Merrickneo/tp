@@ -5,16 +5,6 @@ title: <Merrick Neo> Project Portfolio Page
 
 ### Project: HMHero
 
-### What should be included
-
-- [x] Code contributed
-- [x] Enhancements implemented
-- [x] Contributions to the UG (Optional)
-- [x] Contributions to the DG (Optional)
-- [x] Contributions to team-based tasks
-- [x] Review/mentoring contributions
-- [x] Contributions beyond the project team
-
 (**Overview**)
 
 - HMHero helps Hiring Managers track the statuses of candidates' applications
